@@ -1,10 +1,10 @@
-import Welcome from '@/views/Welcome.vue';
+import Accounts from '@/views/Accounts.vue';
 
 const routes = [
   {
-    path: '/',
-    name: 'Welcome',
-    component: Welcome
+    path: '/accounts',
+    name: 'Accounts',
+    component: Accounts
   }
 ];
 
