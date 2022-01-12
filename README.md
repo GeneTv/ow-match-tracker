@@ -1,24 +1,36 @@
-# ow-stats
+<div align="center">
+  <h3 align="center">Ow Stats</h3>
+  <p>A tracker for Overwatch matches.</p>
 
-## Project setup
+  ![npm package](https://img.shields.io/node/v/@vue/cli?logo=npm&style=flat-square)
+  ![npm package](https://img.shields.io/npm/v/vue?logo=npm&style=flat-square)
+</div>
+
+
+## Setup
+### Prerequisites
+ - [Node.js](https://nodejs.org/en/download/) & Npm installed.
+ - Npm package [@vue/cli](https://www.npmjs.com/package/@vue/cli) globally installed.
+
+### Project Setup
+Install all npm dependencies.
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+#### Compiles and hot-reloads app for development
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+#### Compiles and minifies app for production
 ```
 npm run build
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Documentation
+
+* [Vue.js](https://v3.vuejs.org/guide/introduction.html)
+* [Vuex Store](https://vuex.vuejs.org/)
+* [Vue Router](https://router.vuejs.org/)
