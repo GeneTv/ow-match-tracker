@@ -6,7 +6,7 @@ import store from './store';
 import { dbCreate } from './services/idb.service';
 
 dbCreate([
-  { name: 'accounts', options: { keyPath: 'id'} },
+  { name: 'accounts', options: { keyPath: 'battletag'} },
   { name: 'games', options: { keyPath: 'id'} },
 ]);
 
