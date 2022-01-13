@@ -2,7 +2,7 @@ const DB_NAME = 'ow-stats';
 const DB_VERSION = 1;
 let database;
 
-const dbCreate = () => {
+const dbCreate = (stores) => {
   return new Promise((resolve, reject) => {
     const dbRequest = indexedDB.open(DB_NAME, DB_VERSION);
     dbRequest.onerror = reject;
@@ -10,7 +10,9 @@ const dbCreate = () => {
     dbRequest.onupgradeneeded = event => {
       database = event.target.result;
       // Here we are going to create all stores / collections.
-      database.createObjectStore('games', { keyPath: 'id' }); // keyPath defines a property of the object as the id property.
+      stores.forEach(store => {
+        database.createObjectStore(store.name, store.options); // keyPath defines a property of the object as the id property.
+      });
     }
 
     dbRequest.onsuccess = event => {
