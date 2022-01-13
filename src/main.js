@@ -7,7 +7,7 @@ import { dbCreate } from './services/idb.service';
 
 dbCreate([
   { name: 'accounts', options: { keyPath: 'battletag'} },
-  { name: 'games', options: { keyPath: 'id'} },
+  { name: 'settings', options: { keyPath: 'id'} },
 ]);
 
 createApp(App).use(store).use(router).mount('#app');

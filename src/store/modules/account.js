@@ -1,16 +1,7 @@
+import { dbRead } from '@/services/idb.service';
+
 export const initialState = () => ({
-  accounts: [
-    {
-      battletag: 'GeneTv',
-      discriminator: 2257,
-      skillRating: {
-        openQueue: 0,
-        tank: 0,
-        dps: 0,
-        support: 0
-      }
-    }
-  ]
+  accounts: [];
 });
 
 const getters = {
@@ -18,11 +9,20 @@ const getters = {
 }
 
 const actions = {
-
+  fetchAll: async context => {
+    const accounts = await dbRead('accounts');
+    context.commit('SET_ACCOUNTS', accounts);
+  }
 }
 
 const mutations = {
-
+  ADD_ACCOUNT(state, account) {
+    state.accounts.push(account);
+  },
+  SET_ACCOUNTS(state, accounts) {
+    state.accounts = accounts;
+    console.log('Store accounts:', state.accounts)
+  }
 }
 
 export default {
