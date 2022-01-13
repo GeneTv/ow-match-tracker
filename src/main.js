@@ -1,9 +1,13 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import Buefy from 'buefy'
-import './registerServiceWorker'
-import router from './router'
-import store from './store'
-import 'buefy/dist/buefy.css'
+import { createApp } from 'vue';
+import App from './App.vue';
+import './registerServiceWorker';
+import router from './router';
+import store from './store';
+import { dbCreate } from './services/idb.service';
 
-createApp(App).use(store).use(router).use(Buefy).mount('#app')
+dbCreate([
+  { name: 'accounts', options: { keyPath: 'id'} },
+  { name: 'games', options: { keyPath: 'id'} },
+]);
+
+createApp(App).use(store).use(router).mount('#app');
