@@ -1,7 +1,7 @@
 import { dbRead } from '@/services/idb.service';
 
 export const initialState = () => ({
-  accounts: [];
+  accounts: []
 });
 
 const getters = {
