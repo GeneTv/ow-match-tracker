@@ -6,8 +6,8 @@ import store from './store';
 import { dbCreate } from './services/idb.service';
 
 dbCreate([
-  { name: 'accounts', options: { keyPath: 'battletag'} },
-  { name: 'settings', options: { keyPath: 'id'} },
+  { name: 'accounts', options: { keyPath: 'battletag' } },
+  { name: 'settings', options: { keyPath: 'id' } }
 ]);
 
 createApp(App).use(store).use(router).mount('#app');

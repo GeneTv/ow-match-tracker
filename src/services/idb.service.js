@@ -7,26 +7,26 @@ const dbCreate = (stores) => {
     const dbRequest = indexedDB.open(DB_NAME, DB_VERSION);
     dbRequest.onerror = reject;
 
-    dbRequest.onupgradeneeded = event => {
+    dbRequest.onupgradeneeded = (event) => {
       database = event.target.result;
       // Here we are going to create all stores / collections.
-      stores.forEach(store => {
+      stores.forEach((store) => {
         database.createObjectStore(store.name, store.options); // keyPath defines a property of the object as the id property.
       });
-    }
+    };
 
-    dbRequest.onsuccess = event => {
+    dbRequest.onsuccess = (event) => {
       database = event.target.result;
       resolve(database);
-    }
-  })
-}
+    };
+  });
+};
 
 const dbWrite = (storeName, object) => {
   const transaction = database.transaction(storeName, 'readwrite');
   const store = transaction.objectStore(storeName);
   store.add(object);
-}
+};
 
 const dbRead = (storeName) => {
   return new Promise((resolve, reject) => {
@@ -37,16 +37,16 @@ const dbRead = (storeName) => {
 
     readRequest.onerror = reject;
 
-    readRequest.onsuccess = event => {
+    readRequest.onsuccess = (event) => {
       const cursor = event.target.result;
-      if(cursor) {
+      if (cursor) {
         items.push(cursor.value);
         cursor.continue();
         return;
       }
       resolve(items);
-    }
-  })
-}
+    };
+  });
+};
 
 export { dbCreate, dbWrite, dbRead };
