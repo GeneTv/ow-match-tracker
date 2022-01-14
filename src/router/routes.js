@@ -1,16 +1,16 @@
-import Dashboard from '@/views/Dashboard.vue';
-import Welcome from '@/views/Welcome.vue';
+import Overview from '@/views/Overview.vue';
+import Onboarding from '@/views/Welcome.vue';
 
 const routes = [
   {
     path: '/',
-    name: 'Dashboard',
-    component: Dashboard
+    name: 'Overview',
+    component: Overview
   },
   {
     path: '/onboarding',
-    name: 'Welcome',
-    component: Welcome
+    name: 'Onboarding',
+    component: Onboarding
   }
 ];
 

@@ -30,7 +30,7 @@ import { mapGetters } from 'vuex'
 export default {
   computed: {
     ...mapGetters({
-      getAccounts: 'account/'
+      accounts: 'allAccounts'
     })
   }
 };
