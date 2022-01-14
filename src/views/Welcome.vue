@@ -25,30 +25,13 @@
   </div>
 </template>
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
-  data() {
-    return {
-      accounts: [
-        {
-          battleTag: 'Oicred007',
-          disciminator: 2118,
-          id: 'Oicred007#2118',
-          matchCount: 18,
-          skillRating: { OpenQuere: 1432, Tank: 1932, DPS: 1245, Support: 4923 },
-          mostPlayedChars: ['Roadhog', 'Winston', 'Sombra'],
-          lastLogged: '12.01.2022'
-        },
-        {
-          battleTag: 'ƓǾMMȆHD',
-          disciminator: 2521,
-          id: 'test#2521',
-          matchCount: 22,
-          skillRatings: { OpenQuere: 1842, Tank: 2774, DPS: 2376, Support: 2723 },
-          mostPlayedChars: ['Ana', 'Winston', 'Mercy'],
-          lastLogged: '14.01.2022'
-        }
-      ]
-    };
+  computed: {
+    ...mapGetters({
+      getAccounts: 'account/'
+    })
   }
 };
 </script>
