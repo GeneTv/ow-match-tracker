@@ -1,0 +1,37 @@
+{
+  "battletag": "Oicred007#2118",
+  "username": "Oicred007",
+  "disciminator": 2118,
+  "gamesCount": 18,
+  "skillRating": {
+    "openQueue": 1432,
+    "tank": 1932,
+    "dps": 1245,
+    "support": 4923
+  },
+  "mostPlayedHeros": ["Roadhog", "Winston", "Sombra"],
+  "lastLogged": "2022-01-13",
+  "recordedMatches": [
+    {
+      "id": "d084b28e-65ab-470f-9a07-2896dc716b81",
+      "playedRole": "Tank",
+      "result": "Draw",
+      "map": "Havana",
+      "date": "2022-01-14T00:00:15",
+      "comment": "Lirum adsjdnalkjsdn satz",
+      "group": {
+        "members": ["Jesus#2411", "Hog172#3251"],
+        "premadeCount": 3
+      },
+      "gotPotg": false,
+      "joinedVoice": true,
+      "gameGriefing": {
+        "thrower": "Self",
+        "leaver": "Team"
+      },
+      "heroesPlayed": ["Sombra", "Tracer"],
+      "newTotalSkillRating": 1920,
+      "skillRatingDiff": 12
+    }
+  ]
+}

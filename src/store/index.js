@@ -7,7 +7,7 @@ export const initialState = () => ({
 
 const getters = {
   id: state => `${state.battletag}#${state.discriminator}`,
-  selectedAccount: () => null,
+  selectedAccount: state => state.accounts,
   allAccounts: state => state.accounts,
 }
 
