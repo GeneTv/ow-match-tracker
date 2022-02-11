@@ -2,18 +2,21 @@ import { createStore } from 'vuex';
 import { dbRead } from '@/services/idb.service';
 
 export const initialState = () => ({
+  isPresent: false,
   accounts: []
 });
 
 const getters = {
+  isPresent: state => state.isPresent,
   id: state => `${state.battletag}#${state.discriminator}`,
-  selectedAccount: state => state.accounts,
+  selectedAccount: (state) => state.accounts[0] || {username: 'JeffKaplan', recordedMatches: []},
   allAccounts: state => state.accounts,
 }
 
 const actions = {
   fetchAll: async context => {
     const accounts = await dbRead('accounts');
+    console.log('Imretard')
     context.commit('SET_ACCOUNTS', accounts);
   }
 }

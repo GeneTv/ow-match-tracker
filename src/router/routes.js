@@ -1,16 +1,16 @@
 import Overview from '@/views/Overview.vue';
-import Onboarding from '@/views/Welcome.vue';
+import Welcome from '@/views/Welcome.vue';
 
 const routes = [
   {
     path: '/',
-    name: 'Overview',
-    component: Overview
+    name: 'Onboarding',
+    component: Welcome
   },
   {
-    path: '/onboarding',
-    name: 'Onboarding',
-    component: Onboarding
+    path: '/overview',
+    name: 'Overview',
+    component: Overview
   }
 ];
 
