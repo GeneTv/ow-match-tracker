@@ -1,5 +1,5 @@
 <div align="center">
-  <h3 align="center">Ow Match Tracker</h3>
+  <h3 align="center">Overdiff</h3>
   <p>A tracker for Overwatch matches.</p>
 
   ![npm package](https://img.shields.io/node/v/@vue/cli?logo=npm&style=flat-square)
